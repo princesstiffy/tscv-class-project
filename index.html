@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Super Cool Viking</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/placeholder.jpeg">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <!-- header -->
+     <header id="home">
+        <nav>
+            <ul>
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <!-- main content -->
+      <main>
+        <section id="landing">
+            <div class="landing-content">
+                <img src="assets/images/placeholder.jpeg" alt="Placeholder image" class="landing-image">
+                <a class="bttn" href="#download">Download Now</a>
+            </div>
+        </section>
+
+        <section id="about">
+
+            <!-- curve top - responsive -->
+            <div id="about-curve">
+                        <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                            <path 
+                            fill="#fff2ca"
+                            d="
+                            M0,200
+                            C400,0 1000,0 1440,200
+                            L1440,200
+                            L0,200
+                            Z">
+                            </path>
+                        </svg>
+                </div>
+            
+            <!-- about content -->
+            <div class="about-content">
+                <h1>About Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
+
+
+                <!-- image carousel -->
+                <div class="gallery">
+                    <button class="swiper-button-prev" type="button" aria-label="Previous slide"></button>
+                    <!-- swiper code -->
+                     <div class="container aboutSwiper">
+                        
+                        <!-- image slides -->
+                         <div class="swiper-wrapper">
+
+                            <div class="card-item swiper-slide">
+                                <img src="assets/images/placeholder.jpeg" alt="Placeholder image">
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="assets/images/placeholder.jpeg" alt="Placeholder image">
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="assets/images/placeholder.jpeg" alt="Placeholder image">
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="assets/images/placeholder.jpeg" alt="Placeholder image">
+                            </div>                            
+                         </div>
+
+                         <!-- slider nav -->
+                        <div class="swiper-pagination"></div>
+
+                     </div>
+                    <button class="swiper-button-next" type="button" aria-label="Next slide"></button>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="team-download">
+        <section id="team">
+            <h2>The Team Title</h2>
+            <div class="team-row">
+                <img src="assets/images/placeholder.jpeg" alt="Team member image placeholder" class="team-image tilted-left">
+                <div class="team-copy"><h3>Subtitle</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p></div>
+            </div>
+            <div class="team-row team-row-reverse">
+                <img src="assets/images/placeholder.jpeg" alt="Team member image placeholder" class="team-image tilted-right">
+                <div class="team-copy"><h3>Subtitle</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p></div>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Play Now</h2>
+            <a class="bttn" href="#download">Download on Steam</a>
+        </section>
+        </div>
+
+      </main>
+
+    <footer>
+        <!-- footer -->
+    </footer>
+    
+    <!-- scripts -->
+        <!-- slider js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="script.js"></script>
+</body>
+</html>
