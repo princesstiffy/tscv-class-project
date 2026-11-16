@@ -97,7 +97,7 @@ main { overflow: hidden; }
     font-size: 1.5rem;
     transition: 0.3s ease;
 }
-    .landing-content .bttn {
+    .landing-content .bttn, #download .bttn {
         display: grid;
         place-items: center;
         box-sizing: border-box;
@@ -109,7 +109,7 @@ main { overflow: hidden; }
         color: #3b2112;
         font-size: clamp(2rem, 4vw, 4rem);
     }
-    .landing-content .bttn:hover {
+    .landing-content .bttn:hover, #download .bttn:hover {
         background: url("assets/images/box_paper.png") center / 100% 100% no-repeat;
         color: #3b2112;
     }
@@ -212,11 +212,26 @@ main { overflow: hidden; }
         width: 58px;
         height: 66px;
         margin: 0;
-        color: #f8e4c6;
-        background: url("assets/images/box_paper.png") center / cover no-repeat;
+        padding: 0;
+        border: 0;
+        appearance: none;
+        background-color: transparent;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.2s ease;
+    }
+    #about .swiper-button-prev:hover, #about .swiper-button-next:hover {
+        transform: translateY(-4px);
+    }
+    #about .swiper-button-prev {
+        background-image: url("assets/images/arrow-left");
+    }
+    #about .swiper-button-next {
+        background-image: url("assets/images/arrow-right.png");
     }
     #about .swiper-button-prev::after, #about .swiper-button-next::after {
-        font-size: 1.7rem;
+        display: none;
     }
 
 @media (max-width: 600px) {
@@ -271,6 +286,12 @@ main { overflow: hidden; }
         text-align: center;
         font: clamp(2.6rem, 6vw, 4rem)/1.1 'jacquard', serif;
     }
+    .team-heading-image {
+        display: block;
+        width: min(100%, 34rem);
+        height: auto;
+        margin: 0 auto;
+    }
     .team-row {
         display: grid;
         grid-template-columns: minmax(180px, .85fr) 1fr;
@@ -300,6 +321,9 @@ main { overflow: hidden; }
     #download {
         padding: 5rem 1rem 6rem;
         text-align: center;
+    }
+    #download .bttn {
+        margin-inline: auto;
     }
 
     #download h2 { 
