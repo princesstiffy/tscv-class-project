@@ -16,48 +16,27 @@
 
 </head>
 <body>
-    <!-- header -->
-     <header id="home">
-        <nav>
-            <ul>
-                <li><a href="#landing">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#download">Download</a></li>
-            </ul>
-        </nav>
-     </header>
-
      <!-- main content -->
       <main>
         <section id="landing">
             <div class="landing-content">
-                <img src="assets/images/placeholder.jpeg" alt="Placeholder image" class="landing-image">
                 <a class="bttn" href="#download">Download Now</a>
             </div>
         </section>
 
         <section id="about">
 
-            <!-- curve top - responsive -->
-            <div id="about-curve">
-                        <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
-                            <path 
-                            fill="#fff2ca"
-                            d="
-                            M0,200
-                            C400,0 1000,0 1440,200
-                            L1440,200
-                            L0,200
-                            Z">
-                            </path>
-                        </svg>
-                </div>
-            
+            <!-- Smooth SVG curve overlaps the bottom of the landing section. -->
+            <div id="about-curve" aria-hidden="true">
+                <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                    <path fill="#4D603A" d="M0,200 C400,0 1000,0 1440,200 L1440,200 L0,200 Z"></path>
+                </svg>
+            </div>
+
             <!-- about content -->
             <div class="about-content">
-                <h1>About Title</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
+                <h1>About the Viking</h1>
+                <p>After a long day at work you sit down to play your favorite visual novel about the thrilling world of vikings. Until... you get sucked in? You now find yourself off the coast of a Nordic seaside town where you must navigate a new city, culture, friends, and your way back home.</p>
 
 
                 <!-- image carousel -->
@@ -70,11 +49,11 @@
                          <div class="swiper-wrapper">
 
                             <div class="card-item swiper-slide">
-                                <img src="assets/images/placeholder.jpeg" alt="Placeholder image">
+                                <img src="assets/images/TSCVG_cover.png" alt="Placeholder image">
                             </div>
 
                             <div class="card-item swiper-slide">
-                                <img src="assets/images/placeholder.jpeg" alt="Placeholder image">
+                                <img src="assets/images/tscv-demo1.png" alt="Placeholder image">
                             </div>
 
                             <div class="card-item swiper-slide">
@@ -98,14 +77,14 @@
 
         <div class="team-download">
         <section id="team">
-            <h2>The Team Title</h2>
+            <h2>TSCV Studios</h2>
             <div class="team-row">
                 <img src="assets/images/placeholder.jpeg" alt="Team member image placeholder" class="team-image tilted-left">
-                <div class="team-copy"><h3>Subtitle</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p></div>
+                <div class="team-copy"><h3>The Team</h3><p>TSCV is a small team based in Orlando, FL. We focus on building immersive visual novels for everyone to enjoy! Thank you to Sophia, Victoria, CT, Brooke, and Tiffany for coordinating and producing The Super Cool Viking together,</p></div>
             </div>
             <div class="team-row team-row-reverse">
                 <img src="assets/images/placeholder.jpeg" alt="Team member image placeholder" class="team-image tilted-right">
-                <div class="team-copy"><h3>Subtitle</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p></div>
+                <div class="team-copy"><h3>Our Community</h3><p>For more TSCV content, updates, and community content, visit our official Discord server and social media pages:</p></div>
             </div>
         </section>
 

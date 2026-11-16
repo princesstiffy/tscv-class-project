@@ -8,7 +8,7 @@
     --color-terracotta: #ca936d;
 
     /* website body colors */
-    --color-background: #faf7ef;
+    --color-background: #F7E5C9;
     --color-surface: #fffdf7;
     --color-text: #303528;
     --color-text-light: #ffffff;
@@ -25,14 +25,14 @@
     --gradient-forest: linear-gradient(
         180deg,
         var(--color-forest),
-        #303d2b
+        #4D603A
     );
 }
 
     /* berry rotunda - viking font */
     @font-face {
-    font-family: 'berry';
-    src: url('assets/fonts/berry-rotunda.ttf') format('truetype');
+    font-family: 'jacquard';
+    src: url('assets/fonts/Jacquard24-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -40,8 +40,8 @@
 
     /* doppio one - body font */
     @font-face {
-    font-family: 'doppio';
-    src: url('assets/fonts/DoppioOne-Regular.ttf') format('truetype');
+    font-family: 'jersey';
+    src: url('assets/fonts/Jersey10-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -51,73 +51,36 @@
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: 'doppio', sans-serif;
+    font-family: 'jersey', sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
 }
 main { overflow: hidden; }
 
 
-/* nav */
-nav {    
-    display: flex;
-    position: fixed;
-
-    align-items: center;
-    justify-content: center;
-    
-    z-index: 10;
-    top: 1.5rem;
-    left: clamp(1rem, 5vw, 3rem);
-    right: clamp(1rem, 5vw, 3rem);
-    box-sizing: border-box;
-    height: 60px;
-    margin: 0;
-    padding: 0 1.5rem;
-
-    background-color: var(--color-forest);
-    border-radius: 10px;
-    transition: background-color 220ms ease;
-}
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: clamp(1.5rem, 5vw, 4rem);
-        margin: 0;
-        padding: 0;
-    }
-    nav a {
-        text-decoration: none;
-        color: var(--color-surface);
-        font-weight: bold;
-    }
-    nav.nav-on-team {
-        background-color: var(--color-surface);
-        color: var(--color-text);
-    }
-    nav.nav-on-team a {
-        color: var(--color-text);
-    }
-
-
 /* main - landing */
 #landing {
-    min-height: 500px;
-    padding: 1.5rem clamp(1rem, 5vw, 3rem) 4rem;
+    position: relative;
+    box-sizing: border-box;
+    aspect-ratio: 7 / 5;
+    padding: 0;
     text-align: center;
-    background: var(--color-surface);
+    background: #11120f url("assets/images/Title_Screen_no_box.png") center / contain no-repeat;
 }
 
     .landing-content { 
-        padding: 10rem; 
+        position: absolute;
+        inset: 0;
+        box-sizing: border-box;
+        padding: 0 0 13%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-end;
     }
 
     .landing-image {
-        max-width: 200px;
+        max-width: clamp(7rem, 16vw, 12.5rem);
         width: 100%;
         height: auto;
     }
@@ -130,10 +93,26 @@ nav {
     background: var(--color-sand);
     color: #17150f;
     text-decoration: none;
-    font-family: 'berry', serif;
-    font-size: 1.2rem;
+    font-family: 'jacquard', serif;
+    font-size: 1.5rem;
     transition: 0.3s ease;
 }
+    .landing-content .bttn {
+        display: grid;
+        place-items: center;
+        box-sizing: border-box;
+        width: clamp(12rem, 34vw, 32rem);
+        aspect-ratio: 999 / 379;
+        margin: 0;
+        padding: 0 1.5rem;
+        background: url("assets/images/box_paper.png") center / 100% 100% no-repeat;
+        color: #3b2112;
+        font-size: clamp(2rem, 4vw, 4rem);
+    }
+    .landing-content .bttn:hover {
+        background: url("assets/images/box_paper.png") center / 100% 100% no-repeat;
+        color: #3b2112;
+    }
     .bttn:hover {
         background: var(--color-forest);
         transform: translateY(-2px);
@@ -144,15 +123,16 @@ nav {
 /* about */
 #about {
     position: relative;
+    z-index: 1;
     padding: 4rem clamp(1rem, 8vw, 6rem) 5rem;
-    background: #fff2ca;
+    background: #4D603A;
 }
 
 #about h1 {
     margin: 0px;
     text-align: center;
-    color: var(--color-forest);
-    font: 4rem 'berry', serif;
+    color: var(--color-background);
+    font: 5rem 'jacquard', serif;
 }
 #about-curve {
     position: absolute;
@@ -161,23 +141,24 @@ nav {
     width: 100vw;
     height: 160px;
     transform: translateX(-50%);
-    overflow:hidden;
+    overflow: hidden;
 }
     #about-curve svg {
         display: block;
         width: 100%;
         height: 100%;
     }
-    .about > * {
+    .about-content {
         position: relative;
         z-index: 1;
     }
                
 #about p, .team-copy p {
-    max-width: 540px;
+    max-width: 700px;
     margin: 0 auto;
-    font-size: .85rem;
+    font-size: 1.5rem;
     line-height: 1.9;
+    color: var(--color-background);
 }
 
 
@@ -193,7 +174,7 @@ nav {
     width: min(100%, 1100px);
     height: 100%;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 2rem 0;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -213,48 +194,69 @@ nav {
             justify-content: center;
 
             box-sizing: border-box;
-            padding: 1rem;
-            border-radius: 10px;
-            
-            min-height: 500px;
+            padding: clamp(1rem, 2.5vw, 2rem);
+            border: 28px solid transparent;
+            border-image: url("assets/images/paper-box.png") 45 fill / 28px / 0 stretch;
+            min-height: 0;
             width: 100%;
         }
             #about .card-item img {
                 display: block;
                 width: 100%;
-                height: 500px;
+                height: clamp(220px, 42vw, 500px);
                 object-fit: cover;
             }
     #about .swiper-button-prev, #about .swiper-button-next {
         position: static;
-        flex: 0 0 44px;
-        width: 44px;
-        height: 44px;
+        flex: 0 0 58px;
+        width: 58px;
+        height: 66px;
         margin: 0;
-        color: var(--color-forest);
+        color: #f8e4c6;
+        background: url("assets/images/box_paper.png") center / cover no-repeat;
     }
     #about .swiper-button-prev::after, #about .swiper-button-next::after {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
 @media (max-width: 600px) {
     .gallery { gap: .25rem; }
     #about .swiper-button-prev, #about .swiper-button-next {
-        flex-basis: 32px;
-        width: 32px;
+        flex-basis: 42px;
+        width: 42px;
+        height: 50px;
+    }
+    #about .card-item {
+        border-width: 20px;
+        border-image-width: 20px;
+        padding: .75rem;
+    }
+    #about .card-item img {
+        height: clamp(180px, 58vw, 280px);
     }
 }
 
 /* team and download */
     .team-download {
+        position: relative;
+        isolation: isolate;
         color: white;
         background: linear-gradient(
             180deg,
-            #fff2ca 0,
+            #4D603A 0,
             #789bc1 12rem,
             #435d7b 55%,
             #273342 100%
         );
+    }
+    .team-download::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: url("assets/images/pixel-rain.svg") center / 100% 100% no-repeat;
+        opacity: .8;
     }
     #team, #download { 
         color: white; 
@@ -267,7 +269,7 @@ nav {
     #team > h2, #download h2 {
         margin: 0 0 3rem;
         text-align: center;
-        font: clamp(2.6rem, 6vw, 4rem)/1.1 'berry', serif;
+        font: clamp(2.6rem, 6vw, 4rem)/1.1 'jacquard', serif;
     }
     .team-row {
         display: grid;
@@ -290,7 +292,8 @@ nav {
 
     .team-copy h3 {
         margin: 0 0 .4rem;
-        font: 2rem 'berry', serif;
+        font: 3rem 'jacquard', serif;
+        color: var(--color-background);
     }
 
     /* download */
